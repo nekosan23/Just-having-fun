@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Just having fun.exe" size="14680">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Just having fun.exe" size="15192">
       <assemblyIdentity name="Just having fun" version="0.1.0.5" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>APADEnoQkGibA8nLxh6JCDb0dS3KoKSnvaVnvD3qNUA=</dsig:DigestValue>
+        <dsig:DigestValue>QckhtrOML4kpe5ktPFk259WZEWALehGDFHdKfNe3lcQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -60,6 +60,15 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
       <dsig:DigestValue>ck3BBEGMfFmfmn017LQX533fr1q9cnGkJ/jLpKIzxRo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Text.txt" size="160">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>1wg9M/4QCSJ52ZP9je9PruQCdGIP06bdFe/atydRN48=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">

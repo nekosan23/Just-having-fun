@@ -1,0 +1,9 @@
+TextVar
+0 = Welcome
+1 = Loading
+2 = Command not Found
+HelpTextVar
+0 = first message
+1 = GetHardwareInfo Description
+2 = more coming soon
+3 = press enter
