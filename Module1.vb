@@ -70,8 +70,9 @@ Module Module1
                 TextVar(2) = "This command doesn't exist type help to see all the commands available"
                 HelpTextVar(0) = "This is the current list of available programs"
                 HelpTextVar(1) = "gethardware ---  Launch GetHardwareInfo() allowing you to see all the hardware info VB can access usefull for developing"
-                HelpTextVar(2) = "More coming soon..."
-                HelpTextVar(3) = "Press enter to continue..."
+                HelpTextVar(2) = "setlanguage ---  Launch SetLanguage() allowing you to change the main language of the application"
+                HelpTextVar(3) = "More coming soon..."
+                HelpTextVar(4) = "Press enter to continue..."
             Case "fr"
                 'setting up TextVar
                 TextVar(0) = "bienvenu sur just for fun si tu a besoin d'aide écris 'help' pour avoir la liste de commande"
@@ -79,8 +80,9 @@ Module Module1
                 TextVar(2) = "Cette commande n'existe pas écris help pour voir tout les commandes"
                 HelpTextVar(0) = "Ceci est la liste des programmes disponible actuellement"
                 HelpTextVar(1) = "gethardwareinfo ---  Lance GetHardwareInfo() ce qui vous permet de voir tout les info matériel que VB peux avoir accès utile pour les développeur"
-                HelpTextVar(2) = "Plus a venir..."
-                HelpTextVar(3) = "Appuyez sur entré pour continuez..."
+                HelpTextVar(2) = "setlanguage ---  Lance SetLanguage() ce qui vous permet de changez la langue de l'application"
+                HelpTextVar(3) = "Plus a venir..."
+                HelpTextVar(4) = "Appuyez sur entré pour continuez..."
         End Select
         Clear()
         ConsoleHome()
@@ -105,6 +107,8 @@ Module Module1
                 ConsoleHome()
             Case "help"
                 Help()
+            Case "setlanguage"
+                SetLanguage()
             Case Else
                 WriteLine(TextVar(2))
                 System.Threading.Thread.Sleep(400)
@@ -121,7 +125,12 @@ Module Module1
         WriteLine(HelpTextVar(1))
         WriteLine(HelpTextVar(2))
         WriteLine(HelpTextVar(3))
+        WriteLine(HelpTextVar(4))
         ReadLine()
         ConsoleHome()
+    End Sub
+    'SetLanguage
+    Sub SetLanguage()
+
     End Sub
 End Module
