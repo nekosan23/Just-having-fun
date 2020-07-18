@@ -77,59 +77,5 @@ Namespace My.Resources
                 Return ResourceManager.GetString("cmdlfr", resourceCulture)
             End Get
         End Property
-        
-        '''<summary>
-        '''  Looks up a localized string similar to This command doesn&apos;t exist type help to see all the commands available.
-        '''</summary>
-        Friend ReadOnly Property cmdnfen() As String
-            Get
-                Return ResourceManager.GetString("cmdnfen", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Looks up a localized string similar to Cette commande n&apos;existe pas écris help pour voir tout les commandes.
-        '''</summary>
-        Friend ReadOnly Property cmdnffr() As String
-            Get
-                Return ResourceManager.GetString("cmdnffr", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Looks up a localized string similar to Loading....
-        '''</summary>
-        Friend ReadOnly Property lden() As String
-            Get
-                Return ResourceManager.GetString("lden", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Looks up a localized string similar to Chargement....
-        '''</summary>
-        Friend ReadOnly Property ldfr() As String
-            Get
-                Return ResourceManager.GetString("ldfr", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Looks up a localized string similar to Welcome to just for fun if you need help just type &apos;help&apos; to get the whole list of command.
-        '''</summary>
-        Friend ReadOnly Property wlcen() As String
-            Get
-                Return ResourceManager.GetString("wlcen", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Looks up a localized string similar to bienvenu sur just for fun si tu a besoin d&apos;aide écris &apos;help&apos; pour avoir la liste de commande.
-        '''</summary>
-        Friend ReadOnly Property wlcfr() As String
-            Get
-                Return ResourceManager.GetString("wlcfr", resourceCulture)
-            End Get
-        End Property
     End Module
 End Namespace
