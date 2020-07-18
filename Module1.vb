@@ -8,6 +8,7 @@ Module Module1
     Public TextVar(2) As String
     Public HelpTextVar(5) As String
     Public GetHardwareInfoTextVar(10) As String
+    Public SetLanguageTextVar(5) As String
     'the entire number list is in Text.txt
 
     Sub Main()
@@ -101,13 +102,16 @@ Module Module1
     Sub ReadingCommands(Commands As String)
         Select Case Commands
             Case "gethardware"
+                Clear()
                 WriteLine("coming soon..")
                 WriteLine("press enter to continue..")
                 ReadLine()
                 ConsoleHome()
             Case "help"
+                Clear()
                 Help()
             Case "setlanguage"
+                Clear()
                 SetLanguage()
             Case Else
                 WriteLine(TextVar(2))
@@ -129,6 +133,21 @@ Module Module1
     End Sub
     'SetLanguage
     Sub SetLanguage()
-
+        Static Dim input
+        WriteLine("welcome")
+        WriteLine("what language")
+        input = ReadLine()
+        Select Case input
+            Case "en"
+                My.Settings.UsersLanguage = "en"
+                My.Settings.Save()
+            Case "fr"
+                My.Settings.UsersLanguage = "fr"
+                My.Settings.Save()
+            Case Else
+                WriteLine("wrong answer")
+        End Select
+        Clear()
+        ConfigurationLoader()
     End Sub
 End Module
