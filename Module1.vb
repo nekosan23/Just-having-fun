@@ -5,7 +5,10 @@ Module Module1
     'When use please clear after changing sub to prevent loop
     Public FailSafeInteger As Integer = 0
 
-    Public wlc, cmdnf, cmdl, ld As String
+    Public TextVar(10) As String
+    Public HelpTextVar(10) As String
+    Public GetHardwareInfoTextVar(10) As String
+    'the entire number list is in Text.txt
 
     Sub Main()
         'Setting windows title (below should do this : just having fun V 0.1.0.0)
@@ -61,17 +64,15 @@ Module Module1
     Sub MainLanguageLoader(LanguageSelected As String)
         Select Case LanguageSelected
             Case "en"
-                ld = My.Resources.lden
-                WriteLine(ld)
-                wlc = My.Resources.wlcen
-                cmdnf = My.Resources.cmdnfen
-                cmdl = My.Resources.cmdlen
+                'setting up TextVar
+                TextVar(0) = "Welcome to just for fun if you need help just type 'help' to get the whole list of command"
+                TextVar(1) = "Loading..."
+                TextVar(2) = "This command doesn't exist type help to see all the commands available"
             Case "fr"
-                ld = My.Resources.ldfr
-                WriteLine(ld)
-                wlc = My.Resources.wlcfr
-                cmdnf = My.Resources.cmdnffr
-                cmdl = My.Resources.cmdlfr
+                'setting up TextVar
+                TextVar(0) = "bienvenu sur just for fun si tu a besoin d'aide écris 'help' pour avoir la liste de commande"
+                TextVar(1) = "Chargement..."
+                TextVar(2) = "Cette commande n'existe pas écris help pour voir tout les commandes"
         End Select
         Clear()
         ConsoleHome()
@@ -81,7 +82,7 @@ Module Module1
     Sub ConsoleHome()
         Static Dim Input
         Clear()
-        WriteLine(wlc)
+        WriteLine(TextVar(0))
         Input = ReadLine()
         ReadingCommands(Input)
     End Sub
@@ -97,8 +98,8 @@ Module Module1
             Case "help"
                 Help()
             Case Else
-                WriteLine("Sorry we couldn't find a command called " + Commands)
-                ReadLine()
+                WriteLine(TextVar(2))
+                System.Threading.Thread.Sleep(400)
                 ConsoleHome()
         End Select
     End Sub

@@ -32,35 +32,5 @@ Just having fun
   Looks up a localized string similar to Voici la liste complet de commande.
 </summary>
 </member>
-<member name="P:Just_having_fun.My.Resources.Resources.cmdnfen">
-<summary>
-  Looks up a localized string similar to This command doesn&apos;t exist type help to see all the commands available.
-</summary>
-</member>
-<member name="P:Just_having_fun.My.Resources.Resources.cmdnffr">
-<summary>
-  Looks up a localized string similar to Cette commande n&apos;existe pas écris help pour voir tout les commandes.
-</summary>
-</member>
-<member name="P:Just_having_fun.My.Resources.Resources.lden">
-<summary>
-  Looks up a localized string similar to Loading....
-</summary>
-</member>
-<member name="P:Just_having_fun.My.Resources.Resources.ldfr">
-<summary>
-  Looks up a localized string similar to Chargement....
-</summary>
-</member>
-<member name="P:Just_having_fun.My.Resources.Resources.wlcen">
-<summary>
-  Looks up a localized string similar to Welcome to just for fun if you need help just type &apos;help&apos; to get the whole list of command.
-</summary>
-</member>
-<member name="P:Just_having_fun.My.Resources.Resources.wlcfr">
-<summary>
-  Looks up a localized string similar to bienvenu sur just for fun si tu a besoin d&apos;aide écris &apos;help&apos; pour avoir la liste de commande.
-</summary>
-</member>
 </members>
 </doc>

@@ -123,22 +123,4 @@
   <data name="cmdlfr" xml:space="preserve">
     <value>Voici la liste complet de commande</value>
   </data>
-  <data name="cmdnfen" xml:space="preserve">
-    <value>This command doesn't exist type help to see all the commands available</value>
-  </data>
-  <data name="cmdnffr" xml:space="preserve">
-    <value>Cette commande n'existe pas écris help pour voir tout les commandes</value>
-  </data>
-  <data name="lden" xml:space="preserve">
-    <value>Loading...</value>
-  </data>
-  <data name="ldfr" xml:space="preserve">
-    <value>Chargement...</value>
-  </data>
-  <data name="wlcen" xml:space="preserve">
-    <value>Welcome to just for fun if you need help just type 'help' to get the whole list of command</value>
-  </data>
-  <data name="wlcfr" xml:space="preserve">
-    <value>bienvenu sur just for fun si tu a besoin d'aide écris 'help' pour avoir la liste de commande</value>
-  </data>
 </root>
