@@ -5,8 +5,8 @@ Module Module1
     'When use please clear after changing sub to prevent loop
     Public FailSafeInteger As Integer = 0
 
-    Public TextVar(10) As String
-    Public HelpTextVar(10) As String
+    Public TextVar(2) As String
+    Public HelpTextVar(5) As String
     Public GetHardwareInfoTextVar(10) As String
     'the entire number list is in Text.txt
 
