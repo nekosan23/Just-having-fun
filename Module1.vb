@@ -10,23 +10,9 @@ Module Module1
     Sub Main()
         'Setting windows title (below should do this : just having fun V 0.1.0.0)
         Title = "Just having fun V " + My.Application.Info.Version.ToString
-        'writing down the version number for the updater
-        'WritingVersionForUpdate()
         'Loading configuration
         ConfigurationLoader()
     End Sub
-
-    'Writing down the version so the updater know the version and if a update is available and also launching the updater to update
-    Sub WritingVersionForUpdate()
-        'checking if the version file is existing if so delete to make a new one
-        If My.Computer.FileSystem.FileExists(My.Computer.FileSystem.CurrentDirectory + "/version.txt") Then
-            My.Computer.FileSystem.DeleteFile(My.Computer.FileSystem.CurrentDirectory + "/version.txt")
-            WritingVersionForUpdate()
-        Else
-            My.Computer.FileSystem.WriteAllText(My.Computer.FileSystem.CurrentDirectory + "/version.txt", My.Application.Info.Version.Major.ToString + My.Application.Info.Version.Minor.ToString + My.Application.Info.Version.Build.ToString + My.Application.Info.Version.Revision.ToString, True)
-        End If
-    End Sub
-
     'Reading configuration file if it exist else it should make new configuration and ask the user
     Sub ConfigurationLoader()
         If My.Settings.UsersLanguage = "" AndAlso FailSafeInteger = 1 Then
