@@ -8,7 +8,7 @@ Module Module1
     Public TextVar(2) As String
     Public HelpTextVar(5) As String
     Public GetHardwareInfoTextVar(10) As String
-    Public SetLanguageTextVar(5) As String
+    Public SetLanguageTextVar(2) As String
     'the entire number list is in Text.txt
 
     Sub Main()
@@ -74,6 +74,9 @@ Module Module1
                 HelpTextVar(2) = "setlanguage ---  Launch SetLanguage() allowing you to change the main language of the application"
                 HelpTextVar(3) = "More coming soon..."
                 HelpTextVar(4) = "Press enter to continue..."
+                SetLanguageTextVar(0) = "Welcome to SetLanguage"
+                SetLanguageTextVar(1) = "What language do you want to select ?"
+                SetLanguageTextVar(2) = "This is not a available language"
             Case "fr"
                 'setting up TextVar
                 TextVar(0) = "bienvenu sur just for fun si tu a besoin d'aide écris 'help' pour avoir la liste de commande"
@@ -84,6 +87,9 @@ Module Module1
                 HelpTextVar(2) = "setlanguage ---  Lance SetLanguage() ce qui vous permet de changez la langue de l'application"
                 HelpTextVar(3) = "Plus a venir..."
                 HelpTextVar(4) = "Appuyez sur entré pour continuez..."
+                SetLanguageTextVar(0) = "Bienvenu sur SetLanguage"
+                SetLanguageTextVar(1) = "Quel language veux tu sélectionnez ?"
+                SetLanguageTextVar(2) = "Cette langue n'est pas disponible"
         End Select
         Clear()
         ConsoleHome()
@@ -108,7 +114,6 @@ Module Module1
                 ReadLine()
                 ConsoleHome()
             Case "help"
-                Clear()
                 Help()
             Case "setlanguage"
                 Clear()
@@ -133,10 +138,9 @@ Module Module1
     End Sub
     'SetLanguage
     Sub SetLanguage()
-        Static Dim input
-        WriteLine("welcome")
-        WriteLine("what language")
-        input = ReadLine()
+        WriteLine(SetLanguageTextVar(0))
+        WriteLine(SetLanguageTextVar(1))
+        Static Dim input = ReadLine()
         Select Case input
             Case "en"
                 My.Settings.UsersLanguage = "en"
@@ -145,7 +149,9 @@ Module Module1
                 My.Settings.UsersLanguage = "fr"
                 My.Settings.Save()
             Case Else
-                WriteLine("wrong answer")
+                WriteLine(SetLanguageTextVar(2))
+                System.Threading.Thread.Sleep(500)
+                Clear()
         End Select
         Clear()
         ConfigurationLoader()

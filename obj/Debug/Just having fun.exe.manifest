@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Just having fun.exe" size="15704">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Just having fun.exe" size="16728">
       <assemblyIdentity name="Just having fun" version="0.1.0.5" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>yqAvqrDEbuHxWBJwkpZz07JRdRV0suupwS0/eSk3AM0=</dsig:DigestValue>
+        <dsig:DigestValue>93g3G5XzFieRb9DtBA6Q6+Q/RuMG0UD9blxZO+RS0u0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
