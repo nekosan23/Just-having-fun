@@ -121,11 +121,9 @@ Module Module1
     End Sub
     'Help Command
     Sub Help()
-        WriteLine(HelpTextVar(0))
-        WriteLine(HelpTextVar(1))
-        WriteLine(HelpTextVar(2))
-        WriteLine(HelpTextVar(3))
-        WriteLine(HelpTextVar(4))
+        For Each line In HelpTextVar
+            WriteLine(line)
+        Next
         ReadLine()
         ConsoleHome()
     End Sub
