@@ -13,3 +13,4 @@ E:\Users\quint\source\repos\Just having fun\obj\Debug\Just having fun.applicatio
 E:\Users\quint\source\repos\Just having fun\obj\Debug\Just having fun.exe
 E:\Users\quint\source\repos\Just having fun\obj\Debug\Just having fun.xml
 E:\Users\quint\source\repos\Just having fun\obj\Debug\Just having fun.pdb
+E:\Users\quint\source\repos\Just having fun\obj\Debug\Just having fun.vbprojAssemblyReference.cache

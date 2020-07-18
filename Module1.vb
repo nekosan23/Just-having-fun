@@ -5,9 +5,10 @@ Module Module1
     'When use please clear after changing sub to prevent loop
     Public FailSafeInteger As Integer = 0
 
-    Public TextVar(10) As String
-    Public HelpTextVar(10) As String
+    Public TextVar(2) As String
+    Public HelpTextVar(5) As String
     Public GetHardwareInfoTextVar(10) As String
+    Public SetLanguageTextVar(2) As String
     'the entire number list is in Text.txt
 
     Sub Main()
@@ -70,8 +71,12 @@ Module Module1
                 TextVar(2) = "This command doesn't exist type help to see all the commands available"
                 HelpTextVar(0) = "This is the current list of available programs"
                 HelpTextVar(1) = "gethardware ---  Launch GetHardwareInfo() allowing you to see all the hardware info VB can access usefull for developing"
-                HelpTextVar(2) = "More coming soon..."
-                HelpTextVar(3) = "Press enter to continue..."
+                HelpTextVar(2) = "setlanguage ---  Launch SetLanguage() allowing you to change the main language of the application"
+                HelpTextVar(3) = "More coming soon..."
+                HelpTextVar(4) = "Press enter to continue..."
+                SetLanguageTextVar(0) = "Welcome to SetLanguage"
+                SetLanguageTextVar(1) = "What language do you want to select ?"
+                SetLanguageTextVar(2) = "This is not a available language"
             Case "fr"
                 'setting up TextVar
                 TextVar(0) = "bienvenu sur just for fun si tu a besoin d'aide écris 'help' pour avoir la liste de commande"
@@ -79,8 +84,12 @@ Module Module1
                 TextVar(2) = "Cette commande n'existe pas écris help pour voir tout les commandes"
                 HelpTextVar(0) = "Ceci est la liste des programmes disponible actuellement"
                 HelpTextVar(1) = "gethardwareinfo ---  Lance GetHardwareInfo() ce qui vous permet de voir tout les info matériel que VB peux avoir accès utile pour les développeur"
-                HelpTextVar(2) = "Plus a venir..."
-                HelpTextVar(3) = "Appuyez sur entré pour continuez..."
+                HelpTextVar(2) = "setlanguage ---  Lance SetLanguage() ce qui vous permet de changez la langue de l'application"
+                HelpTextVar(3) = "Plus a venir..."
+                HelpTextVar(4) = "Appuyez sur entré pour continuez..."
+                SetLanguageTextVar(0) = "Bienvenu sur SetLanguage"
+                SetLanguageTextVar(1) = "Quel language veux tu sélectionnez ?"
+                SetLanguageTextVar(2) = "Cette langue n'est pas disponible"
         End Select
         Clear()
         ConsoleHome()
@@ -99,12 +108,16 @@ Module Module1
     Sub ReadingCommands(Commands As String)
         Select Case Commands
             Case "gethardware"
+                Clear()
                 WriteLine("coming soon..")
                 WriteLine("press enter to continue..")
                 ReadLine()
                 ConsoleHome()
             Case "help"
                 Help()
+            Case "setlanguage"
+                Clear()
+                SetLanguage()
             Case Else
                 WriteLine(TextVar(2))
                 System.Threading.Thread.Sleep(400)
@@ -117,11 +130,30 @@ Module Module1
     End Sub
     'Help Command
     Sub Help()
-        WriteLine(HelpTextVar(0))
-        WriteLine(HelpTextVar(1))
-        WriteLine(HelpTextVar(2))
-        WriteLine(HelpTextVar(3))
+        For Each line In HelpTextVar
+            WriteLine(line)
+        Next
         ReadLine()
         ConsoleHome()
+    End Sub
+    'SetLanguage
+    Sub SetLanguage()
+        WriteLine(SetLanguageTextVar(0))
+        WriteLine(SetLanguageTextVar(1))
+        Static Dim input = ReadLine()
+        Select Case input
+            Case "en"
+                My.Settings.UsersLanguage = "en"
+                My.Settings.Save()
+            Case "fr"
+                My.Settings.UsersLanguage = "fr"
+                My.Settings.Save()
+            Case Else
+                WriteLine(SetLanguageTextVar(2))
+                System.Threading.Thread.Sleep(500)
+                Clear()
+        End Select
+        Clear()
+        ConfigurationLoader()
     End Sub
 End Module
