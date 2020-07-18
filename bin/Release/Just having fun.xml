@@ -1,0 +1,66 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Just having fun
+</name>
+</assembly>
+<members>
+<member name="T:Just_having_fun.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:Just_having_fun.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:Just_having_fun.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="P:Just_having_fun.My.Resources.Resources.cmdlen">
+<summary>
+  Looks up a localized string similar to Here the whole commands list.
+</summary>
+</member>
+<member name="P:Just_having_fun.My.Resources.Resources.cmdlfr">
+<summary>
+  Looks up a localized string similar to Voici la liste complet de commande.
+</summary>
+</member>
+<member name="P:Just_having_fun.My.Resources.Resources.cmdnfen">
+<summary>
+  Looks up a localized string similar to This command doesn&apos;t exist type help to see all the commands available.
+</summary>
+</member>
+<member name="P:Just_having_fun.My.Resources.Resources.cmdnffr">
+<summary>
+  Looks up a localized string similar to Cette commande n&apos;existe pas écris help pour voir tout les commandes.
+</summary>
+</member>
+<member name="P:Just_having_fun.My.Resources.Resources.lden">
+<summary>
+  Looks up a localized string similar to Loading....
+</summary>
+</member>
+<member name="P:Just_having_fun.My.Resources.Resources.ldfr">
+<summary>
+  Looks up a localized string similar to Chargement....
+</summary>
+</member>
+<member name="P:Just_having_fun.My.Resources.Resources.wlcen">
+<summary>
+  Looks up a localized string similar to Welcome to just for fun if you need help just type &apos;help&apos; to get the whole list of command.
+</summary>
+</member>
+<member name="P:Just_having_fun.My.Resources.Resources.wlcfr">
+<summary>
+  Looks up a localized string similar to bienvenu sur just for fun si tu a besoin d&apos;aide écris &apos;help&apos; pour avoir la liste de commande.
+</summary>
+</member>
+</members>
+</doc>
