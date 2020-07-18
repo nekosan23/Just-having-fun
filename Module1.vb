@@ -104,9 +104,16 @@ Module Module1
     Sub ReadingCommands(Commands As String)
         Select Case Commands
             Case "gethardware"
-
+                WriteLine("coming soon..")
+                WriteLine("press enter to continue..")
+                ReadLine()
+                ConsoleHome()
             Case "help"
-
+                Help()
+            Case Else
+                WriteLine("Sorry we couldn't find a command called " + Commands)
+                ReadLine()
+                ConsoleHome()
         End Select
     End Sub
     'GetHardwareInfo
